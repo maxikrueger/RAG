@@ -1,0 +1,19 @@
+# QMS-RAG — Test- und Lint-Abhängigkeiten
+#
+# Bewusst ohne torch, sentence-transformers und streamlit: die Testsuite
+# treibt die Pipeline über Fakes, es wird also kein Modell heruntergeladen.
+# Das hält die CI bei wenigen Sekunden statt mehreren Gigabyte.
+
+pytest>=8.0
+ruff>=0.8
+
+# Von den Modulen unter Test importiert
+lancedb>=0.25.0
+tantivy>=0.22.0
+pyarrow>=17.0.0
+anthropic>=0.42.0
+python-dotenv>=1.0.0
+PyMuPDF>=1.24.0
+python-docx>=1.1.0
+openpyxl>=3.1.0
+python-pptx>=1.0.0
